@@ -96,7 +96,7 @@ module Timezone
 
         @zones = []
         list.each do |zone|
-          item = Zone.new(zone: zone)
+          item = Zone.new(:zone => zone)
           @zones << {
             :zone => item.zone,
             :title => Configure.replacements[item.zone] || item.zone,
